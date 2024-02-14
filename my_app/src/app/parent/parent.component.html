@@ -1,1 +1,7 @@
 <p>parent works!</p>
+<div @if(dataFromChild)>
+    {{dataFromChild}}
+</div>
+<div @if(dataFromChild)>
+    <app-child (dataEvent)="dataReceived($event)"></app-child>
+</div>

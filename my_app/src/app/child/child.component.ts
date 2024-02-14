@@ -7,4 +7,9 @@ import { InputComponent } from '../input/input.component';
   templateUrl: './child.component.html',
   styleUrl: './child.component.sass',
 })
-export class ChildComponent {}
+export class ChildComponent {
+  @Output() dataEvent = new EventEmitter<string>();
+  sendData() {
+    this.dataEvent.emit('-----DATA FROM CHILD------');
+  }
+}
